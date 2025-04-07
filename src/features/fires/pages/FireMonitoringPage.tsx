@@ -177,10 +177,6 @@ export default function FireMonitoringPage() {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {fires.map((fire) => {
-                    const confidenceValue = typeof fire.confidence === 'string'
-                      ? parseInt(fire.confidence, 10)
-                      : fire.confidence;
-                    
                     return (
                       <tr key={fire.id || `${fire.latitude}-${fire.longitude}-${fire.acq_date}`} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">

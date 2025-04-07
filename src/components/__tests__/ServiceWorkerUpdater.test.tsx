@@ -106,7 +106,6 @@ describe('ServiceWorkerUpdater', () => {
   });
 
   it('should record metric when update is available', () => {
-    const onUpdate = jest.fn();
     let updateCallback: () => void = () => {};
 
     (useServiceWorker as jest.Mock).mockImplementation(({ onUpdate: callback }) => {

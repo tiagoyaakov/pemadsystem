@@ -1,5 +1,4 @@
-import { useAuth } from '../contexts/AuthContext';
-import { User } from '@/lib/supabase';
+import { useAuth } from './useAuth';
 
 type Role = 'usuario' | 'chefe' | 'comandante';
 

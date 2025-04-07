@@ -10,7 +10,6 @@ import {
   Check, 
   Clock, 
   AlertCircle, 
-  CloudSync,
   FileText,
   Search,
   ChevronDown,

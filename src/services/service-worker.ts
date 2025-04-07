@@ -143,7 +143,7 @@ async function handleFetchStrategy(
   request: Request,
   strategy: string
 ): Promise<Response> {
-  const startTime = performance.now();
+  const _startTime = performance.now();
   const cache = await caches.open(CACHE_NAME);
 
   switch (strategy) {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Download, FileText, FileSpreadsheet, FileDown, Map, Globe } from "lucide-react";
+import { FileText, FileSpreadsheet, FileDown, Map, Globe } from "lucide-react";
 import { FireIncident } from "@/lib/supabase";
 import { FireExportService } from "../services/export.service";
 import { saveAs } from "file-saver";

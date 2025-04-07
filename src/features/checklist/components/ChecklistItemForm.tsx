@@ -19,7 +19,7 @@ const ChecklistItemForm: React.FC<ChecklistItemFormProps> = ({
   initialData,
   isOffline = false
 }) => {
-  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<Omit<ChecklistItem, 'id'>>();
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm<Omit<ChecklistItem, 'id'>>();
   const [loading, setLoading] = useState(false);
   const [filteredMaterials, setFilteredMaterials] = useState<Material[]>(materials);
   const [searchTerm, setSearchTerm] = useState('');

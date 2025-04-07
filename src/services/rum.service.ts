@@ -15,20 +15,6 @@ interface UserMetrics {
   };
 }
 
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  resourceTiming: {
-    name: string;
-    duration: number;
-    initiatorType: string;
-    transferSize: number;
-  }[];
-}
-
 interface MetricPayload {
   [key: string]: any;
 }

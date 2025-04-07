@@ -52,7 +52,7 @@ export function useServiceWorker({
 
   // Monitorar atualizações
   useEffect(() => {
-    function handleUpdateAvailable(event: CustomEvent) {
+    function handleUpdateAvailable(_event: CustomEvent) {
       setUpdateAvailable(true);
       if (registration?.waiting) {
         setWaitingWorker(registration.waiting);

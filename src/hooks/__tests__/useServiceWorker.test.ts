@@ -39,7 +39,7 @@ describe('useServiceWorker', () => {
 
   it('should register service worker on mount', async () => {
     const onSuccess = jest.fn();
-    const { result } = renderHook(() => useServiceWorker({ onSuccess }));
+    const { result: _result } = renderHook(() => useServiceWorker({ onSuccess }));
 
     await act(async () => {
       await Promise.resolve();

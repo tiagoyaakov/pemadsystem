@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSyncStatus } from '../hooks/useSyncStatus';
-import { RefreshCw, AlertCircle, CheckCircle, Cloud, CloudOff } from 'lucide-react';
+import { RefreshCw, AlertCircle, Cloud, CloudOff } from 'lucide-react';
 
 interface SyncStatusProps {
   showDetails?: boolean;
@@ -8,7 +8,7 @@ interface SyncStatusProps {
 }
 
 const SyncStatus: React.FC<SyncStatusProps> = ({ showDetails = false, className = '' }) => {
-  const { pendingCount, isLoading, lastSyncTime, syncProgress, syncErrors, forceSync } = useSyncStatus();
+  const { pendingCount, isLoading: _isLoading, lastSyncTime, syncProgress, syncErrors, forceSync } = useSyncStatus();
   const [isOnline, setIsOnline] = React.useState<boolean>(
     typeof navigator !== 'undefined' ? navigator.onLine : true
   );

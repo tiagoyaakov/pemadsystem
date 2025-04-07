@@ -119,7 +119,7 @@ export class ChecklistExportService {
           2: { cellWidth: 20 },
           3: { cellWidth: 'auto' },
         },
-        didDrawPage: (data: AutoTableData) => {
+        didDrawPage: (_data: AutoTableData) => {
           // Adicionar rodapé com data e hora de geração
           const footerText = `Gerado em: ${new Date().toLocaleString("pt-BR")}`;
           doc.setFontSize(10);

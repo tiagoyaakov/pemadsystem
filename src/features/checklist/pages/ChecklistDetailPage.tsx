@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { useChecklist } from '../hooks/useChecklist';
-import { useAuth } from '@/features/auth/hooks/useAuth';
+import { useChecklist } from '@/features/checklist/hooks/useChecklist';
 import { ChecklistItem, Material } from '@/lib/supabase';
-import OfflineIndicator from '../components/OfflineIndicator';
-import ChecklistItemForm from '../components/ChecklistItemForm';
-import ExportButtons from '../components/ExportButtons';
+import OfflineIndicator from '@/features/offline/components/OfflineIndicator';
+import ChecklistItemForm from '@/features/checklist/components/ChecklistItemForm';
+import ExportButtons from '@/features/checklist/components/ExportButtons';
 import { 
   Check, 
   X, 
@@ -25,7 +24,6 @@ import { supabase } from '@/lib/supabase';
 const ChecklistDetailPage: React.FC = () => {
   const router = useRouter();
   const { id: checklistId } = router.query;
-  const { user } = useAuth();
   const {
     currentChecklist,
     items,

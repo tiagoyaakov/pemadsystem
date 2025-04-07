@@ -109,7 +109,7 @@ export class FireExportService {
           textColor: 255,
           fontStyle: "bold",
         },
-        didDrawPage: (data: AutoTableData) => {
+        didDrawPage: (_data: AutoTableData) => {
           // Adicionar rodapé com data e hora de geração
           const footerText = `Gerado em: ${new Date().toLocaleString("pt-BR")}`;
           doc.setFontSize(10);

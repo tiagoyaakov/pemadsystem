@@ -1,6 +1,7 @@
-import { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiCheckCircle, HiXCircle, HiInformationCircle, HiExclamationCircle, HiX } from 'react-icons/hi';
+import { ToastProps } from './ToastContext';
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
@@ -17,13 +18,6 @@ const icons = {
   error: HiXCircle,
   info: HiInformationCircle,
   warning: HiExclamationCircle,
-};
-
-const styles = {
-  success: 'bg-green-50 text-green-800',
-  error: 'bg-red-50 text-red-800',
-  info: 'bg-blue-50 text-blue-800',
-  warning: 'bg-yellow-50 text-yellow-800',
 };
 
 const iconStyles = {

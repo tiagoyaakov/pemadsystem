@@ -150,7 +150,7 @@ export class CacheService {
   private monitorMemoryUsage(): void {
     for (const [cacheName, cache] of this.caches.entries()) {
       const totalSize = Array.from(cache.values()).reduce((sum, entry) => sum + entry.size, 0);
-      const totalEntries = cache.size;
+      const _totalEntries = cache.size;
       const config = this.configs.get(cacheName);
       
       if (config) {

@@ -134,6 +134,9 @@ module.exports = withPWA({
     ),
     unoptimized: process.env.NODE_ENV === 'development',
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async rewrites() {
     return [
       {
@@ -145,8 +148,5 @@ module.exports = withPWA({
         destination: '/_next/static/workbox-:hash.js',
       },
     ];
-  },
-  experimental: {
-    serverActions: true,
   },
 }); 

@@ -65,6 +65,8 @@ class SupabaseService {
 
     try {
       // Configurar listeners de eventos de autenticação
+      // Disable eslint rule for unused 'session' variable on the next line
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       this.client.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
         if (event === 'SIGNED_IN') {
           metricsService.recordMetric('auth', 'signin', { success: true });
