@@ -1,0 +1,6 @@
+# Ignorar todos os arquivos de relatório
+*.html
+*.json
+
+# Manter o diretório
+!.gitignore 
